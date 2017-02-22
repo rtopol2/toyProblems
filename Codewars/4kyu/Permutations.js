@@ -9,15 +9,15 @@
 // permutations('aabb'); // ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']
 
 function permutations(string) {
-  let permutations = {};
-  function recurse (str, remaining) {
-    if (str.length === string.length) permutations[str] = true;
+  let results = {};
+  function recurse (current, remaining) {
+    if (current.length === string.length) results[current] = true;
     else {
       for (let i=0; i<remaining.length; i++) {
-        recurse(str+remaining[i], remaining.substring(0,i) + remaining.substring(i+1))
+        recurse(current+remaining[i], remaining.substring(0,i) + remaining.substring(i+1))
       }
     }
   } 
   recurse('', string);
-  return Object.keys(permutations);
+  return Object.keys(results);
 }
