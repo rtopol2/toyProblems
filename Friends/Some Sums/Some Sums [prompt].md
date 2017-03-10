@@ -1,7 +1,7 @@
 Some Sums
 =========
 
-Given an array of numbers and a desired sum, return the earliest starting subarray of length num whose entries add up to sum from the input array. Return null if no such subarray exists.
+Given an array of numbers and a desired sum, return the earliest-starting subarray of length num whose entries add up to sum from the input array. Return false if no such subarray exists.
 
 Examples:
 ---------

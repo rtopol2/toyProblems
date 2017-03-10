@@ -1,39 +1,19 @@
-// function someSums (array, sum, num) {
-//   for (let i=0; i<array.length; i++){
-//     let sub = []
-//     let j = i;
-//     while (sub.length < num) {
-//      console.log(sub)
-//      sub.push(array[j]);
-//      j++;
-//     }
-//     if (sub.length === num && getSum(sub) === sum) {
-//       return sub;
-//     }
-//   }
-// }
+function someSums (array, sum, num, subArray=[]) {
+  let sub = subArray.slice();
+  sub.push(array[0]);
+  if (sub.length === num && getSum(sub) === sum) {
+    return sub;
+  }
+  for (let i=1; i<array.length; i++){
+    let result = someSums(array.slice(i), sum, num, sub);
+    if (result) return result;
+  }
+  return false;
+}
 
 function getSum(arr){
   return arr.reduce((sum, num)=>sum+num);
 }
-
-
-unction someSums (array, sum, num) {
-
-let result = false;
-
-function recurse (arr, sub=[]) {
-  let tempArr = arr.slice();
-  let tempSub = sub.slice();
-  if (tempSub)
-  for (let num of arr){
-    if 
-  }
-}
-
-
-
-
 
 someSums([-1,-6,-2,-10,4,5, -1, -10, 1,-2], -10, 3)
 
