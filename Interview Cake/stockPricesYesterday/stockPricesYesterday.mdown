@@ -1,0 +1,12 @@
+##### Write an efficient function that takes stockPricesYesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
+
+For Example:
+
+```
+let stockPricesYesterday = [10, 7, 5, 8, 11, 9];
+
+getMaxProfit(stockPricesYesterday);
+// returns 6 (buying for $5 and selling for $11)
+```
+
+The solution should have O(n) time complexity and O(1) space complexity.
