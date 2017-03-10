@@ -7,12 +7,11 @@ getMaxProfit(stockPricesYesterday);
 function getMaxProfit (prices) {
   
   let mostProfit = -(Infinity);
-  
+  let minPrice = prices[0];
+
   for (let i=0; i<prices.length-1; i++) {
-    let profit = Math.max(...prices.slice(i+1)) - prices[i];
-    if (profit > mostProfit) {
-      mostProfit =  profit;
-    }
+    mostProfit = Math.max(prices[i]-minPrice, mostProfit);
+    minPrice = Math.min(prices[i], minPrice);
   }
   
   return mostProfit;
